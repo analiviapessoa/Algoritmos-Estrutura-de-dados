@@ -1,0 +1,33 @@
+Terminal
+
+- Clonar repositório
+git clone (link do repositório)
+
+- Abrir pastas do pc : 
+ls
+cd (nome da pasta)
+
+- Abrir vs com o repositório
+code .
+
+- Checar status do repositório
+git status
+
+- Adicionar alterações no github
+git add .
+
+- Dar commit
+git commit -m "(mensagem)"
+
+- Dar push na branch
+git push origin main 
+(ou alguma outra branch)
+
+- Deletar pasta Linux
+rm (nome da pasta) -rf
+
+- Deletar pasta Windows
+del (nome da pasta) 
+
+- Criar nova pasta
+mkdir (nome da pasta)
