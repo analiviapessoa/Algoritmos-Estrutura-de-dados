@@ -19,6 +19,8 @@ int main() {
         arr[i] = rand() % 1001; 
     }
 
+    sort(arr, arr+n);
+
     cout << "Array original: ";
     for (int j = 0 ; j < n ; j++){
         cout << arr[j] << " ";
