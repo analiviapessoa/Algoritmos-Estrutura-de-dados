@@ -23,17 +23,25 @@ int main(){
         cin >> P;
     }
 
-    int matrizA[M][N], matrizB[N][P];
+    int matrizA[M][N], matrizB[N][P], matrizC[M][P] = {0};
 
     for (int i = 0 ; i < M ; i++){
         for (int j = 0 ; j < N ; j++){
-            matrizA[i][j] = rand()%101;
+            matrizA[i][j] = rand()%201-101;
         }
     }
 
     for (int i = 0 ; i < N ; i++){
         for (int j = 0 ; j < P ; j++){
-            matrizB[i][j] = rand()%101;
+            matrizB[i][j] = rand()%201-101;
+        }
+    }
+
+    for (int i = 0 ; i < M ; i++){
+        for (int j = 0 ; j < P ; j++){
+            for (int k = 0 ; k < N ; k++){
+                matrizC[i][j] += matrizA[i][k]*matrizB[k][j];
+            }
         }
     }
 
@@ -50,6 +58,15 @@ int main(){
     for (int i = 0 ; i < N ; i++){
         for (int j = 0 ; j < P ; j++){
             cout << matrizB[i][j] << " "; 
+        }
+        cout << endl;
+    }
+    cout << endl;
+
+    cout <<"Matriz C: " << endl;
+    for (int i = 0 ; i < M ; i++){
+        for (int j = 0 ; j < P ; j++){
+            cout << matrizC[i][j] << " "; 
         }
         cout << endl;
     }
